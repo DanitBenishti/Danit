@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-/* GET home page. */
 router.get('/', (req, res) => {
-  res.json({msg:"index work"});
+  res.json({msg:"Welcome to our library"});
 });
 
 module.exports = router;

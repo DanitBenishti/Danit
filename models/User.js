@@ -2,11 +2,10 @@ const mongoose = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
 
 const userSchema = new mongoose.Schema({
-    // Add any additional fields you need for your user model
-    // For example, you might want to include fields like email, name, etc.
-    username: String,
-    email:String,
-    password: String
+    username: { type: String, required: true },
+    email: { type: String, required: true },
+    password: { type: String, required: true },
+    booksLoaned: { type: Number, default: 0 } 
 });
 
 // Add the passport-local-mongoose plugin to your schema

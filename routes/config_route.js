@@ -1,12 +1,10 @@
 
-const loginR = require("./login");
 const booksR = require("./books");
 const indexR = require("./index");
-const registerR = require("./register");
+const loanR = require("./loan");
 
-exports.routesInit = (app) => {    
-    app.use("/", loginR)
+exports.routesInit = (app) => { 
     app.use("/", booksR)
     app.use("/", indexR)
-    app.use("/", registerR)
+    app.use("/", loanR)
 }
